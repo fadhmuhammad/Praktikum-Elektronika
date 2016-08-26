@@ -15,56 +15,24 @@ import java.util.List;
  * Created by fadhl on 8/27/2016.
  * Tutorial : http://guides.codepath.com/android/Using-the-RecyclerView
  */
-public class ModuleAdapter extends
-        RecyclerView.Adapter<ModuleAdapter.ViewHolder> {
+public class ModuleAdapter extends ArrayAdapter<Module> {
+    public ModuleAdapter(Context context, ArrayList<Module> modules) {
+        super(context, 0, modules);
+    }
 
-    public static class ViewHolder extends RecyclerView.ViewHolder {
-        public TextView tvNumber;
-        public TextView tvName;
-
-        public ViewHolder(View itemView) {
-            super(itemView);
-
-            tvNumber = (TextView) itemView.findViewById(R.id.tvNumber);
-            tvName = (TextView) itemView.findViewById(R.id.tvName);
+    @Override
+    public View getView(int position, View convertView, ViewGroup parent) {
+        Module module = getItem(position);
+        if (convertView == null) {
+            convertView = LayoutInflater.from(getContext()).inflate(R.layout.item_module, parent, false);
         }
-    }
 
-    private List<Module> mModules;
-    private Context mContext;
+        TextView tvNumber = (TextView) convertView.findViewById(R.id.tvNumber);
+        TextView tvName = (TextView) convertView.findViewById(R.id.tvName);
 
-    public ModuleAdapter(Context context, List<Module> modules) {
-        mModules = modules;
-        mContext = context;
-    }
+        tvNumber.setText("Modul " + module.number);
+        tvName.setText(module.name);
 
-    private Context getmContext() {
-        return mContext;
-    }
-
-    @Override
-    public ModuleAdapter.ViewHolder onCreateViewHolder(ViewGroup parent, int viewType){
-        Context context = parent.getContext();
-        LayoutInflater inflater = LayoutInflater.from(context);
-
-        View moduleView = inflater.inflate(R.layout.item_module, parent, false);
-
-        ViewHolder viewHolder = new ViewHolder(moduleView);
-        return viewHolder;
-    }
-
-    @Override
-    public void onBindViewHolder(ModuleAdapter.ViewHolder viewHolder, int position){
-        Module module = mModules.get(position);
-
-        TextView noTextView = viewHolder.tvNumber;
-        noTextView.setText("Modul " + module.getNumber());
-        TextView nameTextView = viewHolder.tvName;
-        nameTextView.setText(module.getName());
-    }
-
-    @Override
-    public  int getItemCount(){
-        return  mModules.size();
+        return convertView;
     }
 }
