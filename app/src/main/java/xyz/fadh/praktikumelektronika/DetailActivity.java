@@ -14,8 +14,8 @@ public class DetailActivity extends AppCompatActivity {
         setContentView(R.layout.activity_detail);
 
         Intent intent = getIntent();
+        int noModule = getIntent().getIntExtra("module", 0);
 
-        MarkdownView markdownView = (MarkdownView) findViewById(R.id.markdown_view);
-        markdownView.setMarkDownText("# Hello World\nThis is a simple markdown"); //Displays markdown text
+
     }
 }
