@@ -3,14 +3,16 @@ package xyz.fadh.praktikumelektronika;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.widget.Toolbar;
 import android.webkit.WebSettings;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
 
 
 public class DetailActivity extends AppCompatActivity {
-
+    private Toolbar toolbar;
     WebView webView;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -20,7 +22,9 @@ public class DetailActivity extends AppCompatActivity {
         int noModule = getIntent().getIntExtra("module", 0) + 1;
         String nameModule = getIntent().getStringExtra("name");
 
-        getSupportActionBar().setTitle("Modul " + noModule + " " + nameModule);
+        toolbar = (Toolbar) findViewById(R.id.toolbar);
+        toolbar.setTitle("Modul " + noModule +" " + nameModule);
+        setSupportActionBar(toolbar);
 
         webView = (WebView) findViewById(R.id.wvContent);
         WebSettings webSettings = webView.getSettings();
