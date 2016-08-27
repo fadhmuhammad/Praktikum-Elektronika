@@ -22,7 +22,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         ArrayList<Module> modules = new ArrayList<Module>();
-        ModuleAdapter adapter = new ModuleAdapter(this, modules);
+        final ModuleAdapter adapter = new ModuleAdapter(this, modules);
 
         adapter.add(new Module(1,"Dasar Pengukuran"));
         adapter.add(new Module(2,"Simulasi Rangkaian Elektronika"));
@@ -43,6 +43,7 @@ public class MainActivity extends AppCompatActivity {
             {
                 Intent intent = new Intent(MainActivity.this, DetailActivity.class);
                 intent.putExtra("module", position);
+                intent.putExtra("name",adapter.getItem(position).name);
                startActivity(intent);
             }
         });
