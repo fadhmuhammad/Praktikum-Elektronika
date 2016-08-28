@@ -1,7 +1,5 @@
 package xyz.fadh.praktikumelektronika;
 
-import java.util.ArrayList;
-
 /**
  * Created by fadhl on 8/27/2016.
  */

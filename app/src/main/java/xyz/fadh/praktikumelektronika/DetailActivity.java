@@ -20,11 +20,8 @@ public class DetailActivity extends AppCompatActivity {
 
         Intent intent = getIntent();
         int noModule = getIntent().getIntExtra("module", 0) + 1;
-        String nameModule = getIntent().getStringExtra("name");
 
-        toolbar = (Toolbar) findViewById(R.id.toolbar);
-        toolbar.setTitle("Modul " + noModule +" " + nameModule);
-        setSupportActionBar(toolbar);
+        getSupportActionBar().setTitle("Modul " + noModule);
 
         webView = (WebView) findViewById(R.id.wvContent);
         WebSettings webSettings = webView.getSettings();
@@ -32,6 +29,6 @@ public class DetailActivity extends AppCompatActivity {
         webSettings.setJavaScriptEnabled(false);
 
         webView.setWebViewClient(new WebViewClient());
-        webView.loadUrl("file:///android_asset/modul1/modul1.html");
+        webView.loadUrl("file:///android_asset/modul"+noModule+"/modul"+noModule+".htm ");
     }
 }
