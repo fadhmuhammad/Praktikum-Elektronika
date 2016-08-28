@@ -1,0 +1,156 @@
+<html>
+	<head>
+		<link rel="stylesheet" type="text/css" href="style.css">
+	</head>
+	<body>
+		<h2>Dasar Teori</h2>
+		<p>Sebelum melakukan percobaan, ada beberapa dasar-dasar keselamatan yang harus diperhatikan oleh praktikan. Dalam menyambungkan terminal, kabel power disambungkan ke alat terlebih dahulu baru setelah itu menyambungkan kabel ke terminal power. Usahakan tangan tidak dalam keadaan basah saat memasuki laboratorium elektronika.</p>
+		<h3>Breadboard</h3>
+		<p>Breadboard adalah papan yang digunakan untuk merangkai rangkaian elektronika tanpa harus menggunakan solder. Komponen elektronika yang digunakan dapat dipasang-cabut pada lubang breadboard. Tiap lobang terhubung satu sama lain dengan pola tertentu seperti pada gambar 1. Lobang yang berada pada sisi atas dan bawah tersambung secara horizontal dan terpisah di tengah. Lobang yang berada di tengah breadboard tersambung secara per kolom.</p>
+		<img src="modul1/gambar1.jpg" alt="Gambar 1. Sambungan pada breadboard" width=100%>Gambar 1. Sambungan pada breadboard</img>
+		<h3>Arus Listrik</h3>
+		<p>Arus listrik mengalir dengan dua cara: Alternating Current (AC) dan Direct Current (DC). Pada arus AC, nilai tegangan selalu berubah dari positif ke negatif dan sebaliknya dengan periode tertentu. Arus yang keluar dari terminal power merupakan arus AC. Pada arus DC, nilai tegangan dan arus selalu konstan. Arus DC diproduksi oleh alat yang dapat mengkonversi arus AC dari terminal menjadi arus DC atau dari baterai. Mayoritas perangkat elektronik membutuhkan arus DC untuk bekerja.</p>
+		<img src="modul1/gambar2.png" alt="Gambar 2. Perbedaan arus AC dan DC" width=100%>Gambar 2. Perbedaan arus AC dan DC</img>
+		<h3>Multimeter</h3>
+		<img src="modul1/gambar3.png" alt="Gambar 3. Multimeter analog dan digital" width=100%>Gambar 3. Multimeter analog dan digital</img>
+		<p>Multimeter merupakan instrumen yang digunakan untuk mengukur besaran elektronika, seperti tegangan, hambatan, dan kuat arus. Beberapa multimeter juga dapat mengukur kapasitansi, induktansi, atau uji dioda dan transistor. Berdasarkan cara pembacaan data, multimeter terbagi menjadi dua jenis: analog dan digital. Multimeter analog menampilkan data menggunakan jarum pada skala sedangkan multimeter digital menampilkan data dalam bentuk angka diskrit. Hal yang perlu diperhatikan sebelum melakukan pengukuran adalah  letak pemasangan probe dan mode (jenis dan rentang besaran yang akan diukur). Kesalahan pada kedua hal ini dapat menyebabkan kerusakan pada multimeter.</p>
+		<ul>
+			<li>Pengukuran tegangan: untuk mengukur tegangan dengan multimeter, probe multimeter diletakkan secara paralel terhadap lintasan yang akan diukur.</li>
+			<li>Pengukuran arus: untuk mengukur arus dengan multimeter, probe multimeter diletakkan secara seri pada lintasan yang akan diukur.</li>
+			<li>Pengukuran hambatan: untuk mengukur hambatan dengan multimeter, probe multimeter diletakkan pada kedua ujung hambatan yang tidak terhubung oleh rangkaian.</li>
+		</ul>
+		<img src="modul1/gambar4.PNG" alt="Gambar 4. (A) pengukuran tegangan, (B) pengukuran arus" width=100%>Gambar 4. (A) pengukuran tegangan, (B) pengukuran arus</img>
+		<h3>Signal Generator</h3>
+		<img src="modul1/gambar5.png" alt="Gambar 5. Signal Generator" width=100%>Gambar 5. Signal Generator</img>
+		<p>Signal generator merupakan perangkat elektronika yang berfungsi untuk menghasilkan beberapa bentuk sinyal AC dengan besar amplitudo dan nilai frekuensi yang dapat diatur. Beberapa bagian penting yang ada pada signal generator:</p>
+		<table style="width=100%">
+			<tr>
+				<th>No</th>
+				<th>Bagian SG</th>
+				<th>Fungsi</th>
+			</tr>
+			<tr>
+				<td>1</td>
+				<td>Saklar daya (power switch)</td>
+				<td>Menyalakan SG</td>
+			</tr>
+			<tr>
+				<td>2</td>
+				<td>Terminal output</td>
+				<td>Tempat memasangkan probe output</td>
+			</tr>
+			<tr>
+				<td>3</td>
+				<td>Amplitudo</td>
+				<td>Pengaturan nilai amplitudo yang dihasilkan</td>
+			</tr>
+			<tr>
+				<td>4</td>
+				<td>Frequency</td>
+				<td>Pengaturan nilai frekuensi yang dihasilkan</td>
+			</tr>
+			<tr>
+				<td>5</td>
+				<td>Waveform</td>
+				<td>Memilih bentuk gelombang yang dihasilkan</td>
+			</tr>
+		</table>
+		<p>Untuk mengatur nilai frekeuensi yang dihasilkan, digunakan dua buah panel. Panel pertama berbentuk pemutar dengan skala 10 hingga 100 dan panel kedua berupa tombol yang menentukan faktor pengali dimulai dari 1 hingga 10.000. Nilai frekuensi yang dihasilkan pada signal generator ini dalam satuan Hz (getaran per detik).</p>
+		<h3>Osiloskop</h3>
+		<p>Osiloskop merupakan alat yang mampu menampilkan bentuk sinyal tegangan terhadap waktu, berbeda dengan multimeter yang hanya menampilkan nilai tegangan.</p>
+		<img src="modul1/gambar6.png" alt="Gambar 6. Osiloskop analog Goodwill seri 622G" width=100%>Gambar 6. Osiloskop analog Goodwill seri 622G</img>
+		<p>Bagian-bagian penting pada osiloskop:</p>
+		<table style="width=100%">
+			<tr>
+				<th>No</th>
+				<th>Bagian Osiloskop</th>
+				<th>Fungsi</th>
+			</tr>
+			<tr>
+				<td>1</td>
+				<td>Channel 1</td>
+				<td>Tempat memasukkan probe untuk mengukur data sinyal atau tegangan.</td>
+			</tr>
+			<tr>
+				<td>2</td>
+				<td>Channel 2</td>
+				<td>Tempat memasukkan probe untuk mengukur data sinyal atau tegangan. Kedua channel dapat digunakan terpisah atau bersamaan</td>
+			</tr>
+			<tr>
+				<td>3</td>
+				<td>Position X</td>
+				<td>Mengatur posisi citra sinyal di layar pada arah sumbu X.</td>
+			</tr>
+			<tr>
+				<td>4</td>
+				<td>Position Y</td>
+				<td>PMengatur posisi citra sinyal di layar pada arah sumbu Y.</td>
+			</tr>
+			<tr>
+				<td>5</td>
+				<td>Volt/Div</td>
+				<td>Mengatur skala (faktor pengali) dari tegangan yang akan diwakilkan oleh satu satuan persegi pada layar. Skala tegangan dinyatakan secara vertikal.</td>
+			</tr>
+			<tr>
+				<td>6</td>
+				<td>Time/Div</td>
+				<td>Mengatur skala (faktor pengali) dari waktu yang akan diwakilkan oleh satu satuan persegi pada layar. Skala waktu dinyatakan secara horizontal.</td>
+			</tr>
+			<tr>
+				<td>7</td>
+				<td>Source</td>
+				<td>Menentukan channel pengukuran yang akan ditampilkan pada layar.</td>
+			</tr>
+			<tr>
+				<td>8</td>
+				<td>Inten</td>
+				<td>Mengatur tingkat kecerahan (intensitas cahaya) pada layar.</td>
+			</tr>
+			<tr>
+				<td>9</td>
+				<td>Focus</td>
+				<td>Mengatur tingkat ketajaman dari citra sinyal yang ditampilkan pada layar untuk memperoleh gambar yang lebih jelas.</td>
+			</tr>
+			<tr>
+				<td>10</td>
+				<td>Ground</td>
+				<td>Menampilkan posisi ground (tegangan nol) pada channel yang digunakan pada layar. Dimanfaatkan sebagai kalibrator.</td>
+			</tr>
+			<tr>
+				<td>11</td>
+				<td>Level</td>
+				<td>Menghentikan gerak dari citra sinyal pada layar osiliskop.</td>
+			</tr>
+		</table>
+		<br/>
+		<img src="modul1/gambar7.png" alt="Gambar 7. Layar osiloskop" width=60%><br/>Gambar 7. Layar osiloskop</img>
+		<p>Layar osiloskop tampak seperti gambar 7. Nilai satu satuan persegi (division) pada layar osiloskop bergantung pada pengaturan nilai Volt/div dan time/div. Sebagai contoh ketika osiloskop diatur pada posisi 1 Volt/div dan 1m time/div, maka satu kotak pada arah sumbu y menyatakan nilai 1 Volt dan satu kotak pada arah sumbu x menyatakan nilai 1 milisekon atau 0,001 sekon. Bila didapati citra sinyal dengan amplitudo setinggi 2 kotak dan satu perioda dari citra tersebut adalah sepanjang 5 kotak kita dapat segera mengetahui sinyal tersebut memiliki nilai tegangan peak-to-peak sebesar 4 Volt dan perioda senilai 5 ms, atau dengan kata lain sinyal tersebut memiliki frekuensi 200 Hz. Untuk membandingkan dua atau lebih sinyal masukan baik secara bersamaan maupun tidak harus menggunakan skala yang sama, khususnya untuk skala sumbu y atau Volt/div. Hal lain yang perlu diperhatikan adalah pada bagian kiri bawah dari layar terdapat suatu male port berupa lempengan logam kecil dengan lubang bagian tengahnya yang diberi label CAL 2Vp-p (lihat gambar 6). Bagian ini digunakan sebagai kalibrator utama ketika osiloskop hendak digunakan pertama kali. Cara mengkalibrasikan osiloskop pertama kali adalah sebagai berikut</p>
+		<ul>
+			<li>Atur nilai volt/div sebesar 1V atau 2 V dan atur channel yang akan ditampil</li>
+			<li>Hubungkan channel tersebut dengan probe osiloskop, kemudian sentuhkan probe tersebut pada lempeng logam pada bagian kiri bawah layar tersebut.</li>
+			<li>Atur nilai time/div dan level sehingga citra dua buah garis dengan nilai tegangan peak-to-peak sebesar 2 Volt tersebut nampak dengan jelas pada layar.</li>
+			<li>Atur posisi vertikal dengan menggunakan panel yang ada sehingga titik tengah dari kedua garis itu tepat berada pada tengah layar (y=0), atau dengan kata lain kedua garis yang nampak berada pada nilai positif dan negatif yang sama. Untuk penggunaan volt/div sebesar 1V, garis akan berada dua kotak di atas dan dua kotak di bawah dari titik tengah. </li>
+			<li>Osiloskop telah terkalibrasi dan telah dapat digunakan untuk melakukan pengukuran.</li>
+		</ul>
+		<h3>Resistor</h3>
+		<p>Resistor (hambatan) berfungsi untuk mengatur arus listrik yang mengalir pada sebuah komponen. Resistor memiliki nilai resistansi yang dinyatakan dengan satuan ohm (Ω). Nilai resistansi pada setiap resistor  direpresentasikan oleh pita warna pada tiap resistor.</p>
+		<img src="modul1/gambar8.jpg" alt="Gambar 8. Resistor" width=100%>Gambar 8. Resistor</img>
+		<img src="modul1/tabel resistor.PNG" alt="tabel resistor" width=100%>Kode warna transistor</img>
+		<p>Tiap resistor mempunyai jumlah pita warna yang berbeda, dari 4 hingga 6 buah. Tiap resistor yang mempunyai jumlah berbeda juga memiliki pembacaan pita yang berbeda.</p>
+		<ul>
+			<li>Pita pertama	: angka pertama dari nilai resistansi.</li>
+			<li>Pita kedua		: angka kedua dari nilai resistansi.</li>
+			<li>Pita ketiga		: nilai faktor pengali dengan satuan ohm (resistor dengan 4gelang warna); atau 			  angka ketiga dari nilai resistansi (resistor dengan 5 dan 6 gelang warna).</li>
+			<li>Pita keempat	: nilai toleransi (resistor dengan 4 gelang warna); nilai faktor pengali dengan 			  satuan ohm (resistor dengan 5 dan 6 gelang warna).</li>
+			<li>Pita kelima		: nilai toleransi (resistor dengan 5 dan 6 gelang warna).</li>
+			<li>Pita keenam	: koefisien temperatur dengan satuan part per millions(ppm)/OC.</li>
+		</ul>
+		<h3>Rangkaian Thevenin</h3>
+		<p>Rangkaian Thevenin merupakan metode untuk menyederhanakan rangkaian elektronika secara teoretis-matematis. Penyederhanaan Thevenin mengubah rangkaian elektronika yang kompleks menjadi rangkaian yang terdiri dari sebuah sumber tegangan dan resistor yang dipasang seri terhadap sumber tegangan. Sebagai contoh, langkah-langkah untuk membuat rangkaian Thevenin dari rangkaian pembagi tegangan pada gambar 9:</p>
+		<ul>
+			<li>Rangkaian harus dalam keadaan terbuka (open circuit). Ini berarti tidak ada arus yang mengalir dari A ke B.</li>
+			<li>Ketika rangkaian terbuka, maka tidak ada arus yang mengalir dari A ke B, sehingga tidak ada arus yang mengalir ke R2. Oleh karena itu, tegangan thevenin dapat dicari  dengan menggunakan kaidah pembagi tegangan.<br/><img src="modul1/rumus vth.PNG" alt="rumus vth" width=60%></li>
+			<li>Untuk mencari hambatan Thevenin (RTH), rangkaian dianggap tidak mempunyai sumber tegangan. RTH merupakan nilai resistansi jika ohmmeter dihubungkan ke terminal A dan B.<br/><img src="modul1/rumus rth.PNG" alt="rumus rth" width=60%></li>
+		</ul>
+	</body>
+</html>

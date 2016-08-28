@@ -43,5 +43,27 @@ public class MainActivity extends AppCompatActivity {
                     }
                 }
         );
+
+        ArrayList<Other> otherMenu = new ArrayList<Other>();
+
+        otherMenu.add(new Other("Peraturan Praktikum"));
+        otherMenu.add(new Other("Asisten Praktikum"));
+        otherMenu.add(new Other("Nilai Praktikum"));
+
+        OtherAdapter otherAdapter = new OtherAdapter(this,otherMenu);
+        RecyclerView otherRecyclerView =  (RecyclerView) findViewById(R.id.rvLain);
+        otherRecyclerView.setAdapter(otherAdapter);
+        otherRecyclerView.setLayoutManager(new LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false));
+
+        ItemClickSupport.addTo(otherRecyclerView).setOnItemClickListener(
+                new ItemClickSupport.OnItemClickListener(){
+                    @Override
+                    public void onItemClicked(RecyclerView mRecycleView, int position, View v){
+                        Intent intent = new Intent(MainActivity.this, DetailActivity.class);
+                        intent.putExtra("module", position+9);
+                        startActivity(intent);
+                    }
+                }
+        );
     }
 }

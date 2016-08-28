@@ -20,8 +20,19 @@ public class DetailActivity extends AppCompatActivity {
 
         Intent intent = getIntent();
         int noModule = getIntent().getIntExtra("module", 0) + 1;
-
-        getSupportActionBar().setTitle("Modul " + noModule);
+        switch (noModule){
+            case 10 :
+                getSupportActionBar().setTitle("Peraturan Praktikum");
+                break;
+            case 11 :
+                getSupportActionBar().setTitle("Asisten Praktikum");
+                break;
+            case 12:
+                getSupportActionBar().setTitle("Nilai Praktikum");
+                break;
+            default:
+                getSupportActionBar().setTitle("Modul " + noModule);
+        }
 
         webView = (WebView) findViewById(R.id.wvContent);
         WebSettings webSettings = webView.getSettings();
@@ -29,6 +40,6 @@ public class DetailActivity extends AppCompatActivity {
         webSettings.setJavaScriptEnabled(false);
 
         webView.setWebViewClient(new WebViewClient());
-        webView.loadUrl("file:///android_asset/modul"+noModule+"/modul"+noModule+".htm ");
+        webView.loadUrl("file:///android_asset/"+noModule+".html");
     }
 }
